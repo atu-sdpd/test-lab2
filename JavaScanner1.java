@@ -12,10 +12,10 @@ public class JavaScanner1 {
 			int number1;
 
 			System.out.print("Enter an integer: ");
-			// number1 = keyboard.nextInt();
+			number1 = keyboard.nextInt();
 
 			//Output to the console displaying number1 variable value
-			// System.out.println("Number input was: " + number1);
+			System.out.println("Number input was: " + number1);
 		}
 }
 
