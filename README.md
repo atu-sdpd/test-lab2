@@ -35,3 +35,7 @@ java -jar ./test/lib/junit-platform-console-standalone-1.9.0-M1.jar -cp "./test:
 
 
 ## Compiling and Testing Student Code
+```
+javac -cp ".:./test/lib/*"  ./test/JavaScanner1Test.java 
+java -jar ./test/lib/junit-platform-console-standalone-1.9.0-M1.jar -cp ".:./test:./test/lib/system-lambda-1.2.1.jar" -c JavaScanner1Test
+```
