@@ -1,5 +1,6 @@
 import static com.github.stefanbirkner.systemlambda.SystemLambda.*;
-import static org.junit.jupiter.api.Assertions.*;
+import static org.hamcrest.Matchers.*;
+import static org.hamcrest.MatcherAssert.assertThat; 
 import org.junit.jupiter.api.Test;
 import java.util.Scanner;
 
@@ -20,6 +21,6 @@ public class JavaScanner5Test {
                     JavaScanner5.main(new String[0]);
                 });           
         });
-        assertEquals(expected, output);
+        assertThat(expected, equalTo(output));
     }
 }
