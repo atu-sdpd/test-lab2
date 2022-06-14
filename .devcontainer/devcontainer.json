@@ -29,12 +29,13 @@
 					"path": "/usr/local/sdkman/candidates/java/current"
 				}]
 			},
-			
+			"settingsSync.ignoredExtensions": [
+				"alexkrechik.cucumberautocomplete"
+			],
 			// Add the IDs of extensions you want installed when the container is created.
 			"extensions": [
 				"github.classroom",
 				"formulahendry.code-runner"
-			]
 		}
 	},
 
