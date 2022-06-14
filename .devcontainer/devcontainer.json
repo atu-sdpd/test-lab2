@@ -21,6 +21,9 @@
 		"vscode": {
 			// Set *default* container specific settings.json values on container create.
 			"settings": { 
+				"settingsSync.ignoredExtensions": [
+					"alexkrechik.cucumberautocomplete"
+				],				
 				"java.home": "/docker-java-home",
 				"java.import.gradle.java.home": "/usr/local/sdkman/candidates/java/current",
 				"java.configuration.runtimes": [{
@@ -29,13 +32,11 @@
 					"path": "/usr/local/sdkman/candidates/java/current"
 				}]
 			},
-			"settingsSync.ignoredExtensions": [
-				"alexkrechik.cucumberautocomplete"
-			],
 			// Add the IDs of extensions you want installed when the container is created.
 			"extensions": [
 				"github.classroom",
 				"formulahendry.code-runner"
+			]
 		}
 	},
 
