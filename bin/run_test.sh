@@ -9,7 +9,7 @@ if [ $? -eq 0 ]; then
    echo Compiled successfully
 else
    echo Failed to compile
-   exit
+   exit 1
 fi
 
 echo  Running test...
