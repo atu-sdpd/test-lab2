@@ -1,13 +1,18 @@
 import static com.github.stefanbirkner.systemlambda.SystemLambda.*;
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Disabled;
 import java.util.Scanner;
-
-// import JavaScanner1;
+import static org.hamcrest.Matchers.*;
+import static org.hamcrest.MatcherAssert.assertThat; 
+import java.util.regex.Pattern;
 
 
 public class JavaScanner1Test {
+
+    
     @Test
+    @Disabled
     void application_writes_text_to_System_out() throws Exception {
     String text = tapSystemOut(() -> {
         System.out.print("some text");
@@ -16,6 +21,7 @@ public class JavaScanner1Test {
     }
 
     @Test
+    @Disabled
     void application_writes_mutliple_lines_to_System_out() throws Exception {
     String text = tapSystemOutNormalized(() -> {
         System.out.println("first line");
@@ -25,6 +31,7 @@ public class JavaScanner1Test {
     }
 
     @Test
+    @Disabled
     void Scanner_reads_text_from_System_in(
     ) throws Exception {
     withTextFromSystemIn("first line", "second line")
@@ -44,13 +51,22 @@ public class JavaScanner1Test {
     // }
 
     @Test
-    void testJavaScanner1Input() throws Exception {
+    void testJavaScanner1() throws Exception {
+        // \\W* matches one or more non-word characters (i.e. not [a-zA-Z_0-9])
+        // (useful for variations in spacing, use of colons etc)
+        String expectedOutput = "Enter an integer\\W*" 
+            + "Number input was\\W*8\\W*";
+
+        // Compiling the pattern with the CASE_INSENSITIVE flag will make the 
+        // resulting matches case insensitive
+        Pattern expectedPattern = Pattern.compile(expectedOutput, Pattern.CASE_INSENSITIVE); 
+               
         String output = tapSystemOut(() -> {
             withTextFromSystemIn("8")
                 .execute(() -> {
                     JavaScanner1.main(new String[0]);
                 });           
         });
-        assertEquals("Enter an integer: Number input was: 8\n", output);
+        assertThat(output, matchesPattern(expectedPattern));
     }
 }
