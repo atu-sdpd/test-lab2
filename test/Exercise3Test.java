@@ -5,10 +5,12 @@ import org.junit.jupiter.api.Test;
 import java.util.regex.Pattern;
 import java.util.Scanner;
 
-public class JavaScanner5Test {
+public class Exercise3Test {
+
+    final String[] EMPTY_STRING_ARRAY = new String[0];
 
     @Test
-    void testJavaScanner5() throws Exception {
+    void testExercise3() throws Exception {
         // Regular expression pattern for expected output
         // \\W* matches one or more non-word characters (i.e. not [a-zA-Z_0-9])
         // (useful for variations in spacing, use of colons etc)
@@ -27,7 +29,7 @@ public class JavaScanner5Test {
         String output = tapSystemOut(() -> {
             withTextFromSystemIn("11", "6.4")
                 .execute(() -> {
-                    JavaScanner5.main(new String[0]);
+                    Exercise3.main(EMPTY_STRING_ARRAY);
                 });           
         });
         assertThat(output, matchesPattern(expectedPattern));

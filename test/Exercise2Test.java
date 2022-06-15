@@ -6,10 +6,12 @@ import static org.hamcrest.Matchers.*;
 import static org.hamcrest.MatcherAssert.assertThat; 
 import java.util.regex.Pattern;
 
-public class JavaScanner2Test {
+public class Exercise2Test {
+
+    final String[] EMPTY_STRING_ARRAY = new String[0];
 
     @Test
-    void testJavaScanner2() throws Exception {      
+    void testExercise2() throws Exception {      
         String expectedOutput = "Enter first number\\W*"
             + "Enter second number\\W*"
             + "Enter third number\\W*" 
@@ -22,7 +24,7 @@ public class JavaScanner2Test {
         String output = tapSystemOut(() -> {
             withTextFromSystemIn("54", "43", "27")
                 .execute(() -> {
-                    JavaScanner2.main(new String[0]);
+                    Exercise2.main(EMPTY_STRING_ARRAY);
                 });           
         });
         assertThat(output, matchesPattern(expectedPattern));

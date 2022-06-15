@@ -1,9 +1,8 @@
-//Name:
-//Description:
+// Formerly JavaScanner1
 
 import java.util.Scanner;
 
-public class JavaScanner1 {
+public class Exercise1 {
 	public static void main(String[] args){
 
 			//Create instance of Scanner object

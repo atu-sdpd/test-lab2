@@ -8,8 +8,9 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import java.util.regex.Pattern;
 
 
-public class JavaScanner1Test {
+public class Exercise1Test {
 
+    final String[] EMPTY_STRING_ARRAY = new String[0];
     
     @Test
     @Disabled
@@ -42,16 +43,8 @@ public class JavaScanner1Test {
         });
     }
 
-    // @Test
-    // void testJavaScanner1Output() throws Exception {
-    //     String output = tapSystemOut(() -> {
-    //         JavaScanner1.main(new String[0]);
-    //     });
-    //     assertEquals("Enter an integer: ", output);
-    // }
-
     @Test
-    void testJavaScanner1() throws Exception {
+    void testExercise1() throws Exception {
         // \\W* matches one or more non-word characters (i.e. not [a-zA-Z_0-9])
         // (useful for variations in spacing, use of colons etc)
         String expectedOutput = "Enter an integer\\W*" 
@@ -64,7 +57,7 @@ public class JavaScanner1Test {
         String output = tapSystemOut(() -> {
             withTextFromSystemIn("8")
                 .execute(() -> {
-                    JavaScanner1.main(new String[0]);
+                    Exercise1.main(EMPTY_STRING_ARRAY);
                 });           
         });
         assertThat(output, matchesPattern(expectedPattern));

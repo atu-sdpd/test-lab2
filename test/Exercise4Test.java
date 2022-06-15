@@ -5,10 +5,12 @@ import org.junit.jupiter.api.Test;
 import java.util.regex.Pattern;
 import java.util.Scanner;
 
-public class JavaIf9Test {
+public class Exercise4Test {
+
+    final String[] EMPTY_STRING_ARRAY = new String[0];
 
     @Test
-    void testJavaIf9_Even() throws Exception {
+    void testExercise4_Even() throws Exception {
         // Regular expression pattern for expected output
         // \\W* matches one or more non-word characters (i.e. not [a-zA-Z_0-9])
         // (useful for variations in spacing, use of colons etc)
@@ -22,14 +24,14 @@ public class JavaIf9Test {
         String output = tapSystemOut(() -> {
             withTextFromSystemIn("4")
                 .execute(() -> {
-                    JavaIf9.main(new String[0]);
+                    Exercise4.main(EMPTY_STRING_ARRAY);
                 });           
         });
         assertThat(output, matchesPattern(expectedPattern));
     }
 
     @Test
-    void testJavaIf9_Odd() throws Exception {
+    void testExercise4_Odd() throws Exception {
         // Regular expression pattern for expected output
         // \\W* matches one or more non-word characters (i.e. not [a-zA-Z_0-9])
         // (useful for variations in spacing, use of colons etc)
@@ -43,7 +45,7 @@ public class JavaIf9Test {
         String output = tapSystemOut(() -> {
             withTextFromSystemIn("9")
                 .execute(() -> {
-                    JavaIf9.main(new String[0]);
+                    Exercise4.main(EMPTY_STRING_ARRAY);
                 });           
         });
         assertThat(output, matchesPattern(expectedPattern));
