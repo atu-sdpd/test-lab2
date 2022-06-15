@@ -21,9 +21,6 @@
 		"vscode": {
 			// Set *default* container specific settings.json values on container create.
 			"settings": { 
-				"settingsSync.ignoredExtensions": [
-					"alexkrechik.cucumberautocomplete"
-				],				
 				"java.home": "/docker-java-home",
 				"java.import.gradle.java.home": "/usr/local/sdkman/candidates/java/current",
 				"java.configuration.runtimes": [{
@@ -47,9 +44,5 @@
 	// "postCreateCommand": "java -version",
 
 	// Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
-	"remoteUser": "vscode",
-	"features": {
-		"git": "latest",
-		"github-cli": "latest"
-	}
+	"remoteUser": "vscode"
 }
