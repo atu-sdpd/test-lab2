@@ -1,0 +1,24 @@
+{
+    "tests": [  
+      {
+        "name": "Test 1",
+        "setup": "",
+        "run": "cd .",
+        "input": "",
+        "output": "",
+        "comparison": "included",
+        "timeout": 2,
+        "points": 0
+      },
+      {
+        "name": "Test 2",
+        "setup": "",
+        "run": "cd .",
+        "input": "",
+        "output": "",
+        "comparison": "included",
+        "timeout": 2,
+        "points": 0
+      }
+    ]
+  }  
