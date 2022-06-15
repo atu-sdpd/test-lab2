@@ -18,12 +18,12 @@ public class JavaScanner5 {
 			num2 = keyboard.nextDouble();
 
 			//Output to the console displaying variable values
-			// System.out.println(" - - - - - - - - - - - - - - - - - - ");
-			// System.out.println("");
+			System.out.println(" - - - - - - - - - - - - - - - - - - ");
+			System.out.println("");
 			System.out.println("First number entered was: " + num1);
 			System.out.println("Second number entered was: " + num2);
-			// System.out.println(" - - - - - - - - - - - - - - - - - - ");
-			// System.out.println("");
+			System.out.println(" - - - - - - - - - - - - - - - - - - ");
+			System.out.println("");
 			System.out.println("Sum of numbers: " + (num1 + num2));
 			System.out.println("Average of numbers: " + (num1 + num2)/2);
 

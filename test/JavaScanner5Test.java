@@ -15,7 +15,8 @@ public class JavaScanner5Test {
         String expectedOutput = "Enter integer number\\W*" 
             + "Enter decimal point number\\W*"
             + "First number entered was\\W*11\\n"
-            + "Second number entered was\\W*6.4\\n"
+            + "Second number entered was\\W*6.4"
+            + "\\W*"
             + "Sum of numbers\\W*17.4\\n*" 
             + "Average of numbers\\W*8.7\\n*";
 
